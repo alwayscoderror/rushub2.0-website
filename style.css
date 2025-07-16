@@ -139,8 +139,6 @@ html, body {
   color: #ffffff;
   width: 100vw;
   min-height: 100vh;
-  box-sizing: border-box;
-  position: relative;
   display: flex;
   flex-direction: column;
 }
