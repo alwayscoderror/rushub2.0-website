@@ -1,226 +1,133 @@
-/* === Базовые стили для html и body === */
+/* === Глобальные стили === */
 html, body {
+  font-family: 'Montserrat', Arial, sans-serif;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-/* === Стартовая секция (hero) === */
+/* === СТАРТОВАЯ СТРАНИЦА === */
+
 .hero-section {
+  display: flex;
   width: 100vw;
   height: 100vh;
-  background: url('img/background-starting-page.svg') no-repeat center center;
-  background-size: cover;
-  min-height: 100vh;
-  min-width: 100vw;
-  overflow: hidden;
-  font-family: 'Montserrat', Arial, sans-serif;
-  color: #fff;
-  position: relative;
+}
+
+/* === СТАРТОВАЯ СТРАНИЦА ЛЕВАЯ ЧАСТЬ === */
+
+.hero-left {
+  background: #AF2C33;
+  color: #ffffff;
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 32px 0 0 40px;
 }
 
-/* === Шапка: логотип и название === */
-.header {
-  margin-top: 40px;
-  margin-left: 60px;
+/* === ЛОГО + НАЗВАНИЕ === */
+
+.hero-logo-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  z-index: 2;
+  gap: 24px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
-/* === Логотип (иконка) === */
-.logo {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero-logo {
+  width: 64px;
+  height: 64px;
 }
 
-/* === Название организации в шапке === */
-.header-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: 400;
-}
-.header-title span:last-child {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-/* === Кнопка "ВОЙТИ" в правом верхнем углу === */
-.btn-login {
-  position: absolute;
-  top: 40px;
-  right: 60px;
-  padding: 8px 32px;
-  border: 2px solid #fff;
-  background: transparent;
-  color: #fff;
-  font-family: 'Montserrat', Arial, sans-serif;
+.hero-title {
   font-size: 22px;
+  line-height: 1.2;
+  color: #fff;
   font-weight: 400;
-  border-radius: 24px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  outline: none;
-  z-index: 2;
-}
-.btn-login:hover {
-  background: #fff;
-  color: #ea3e23;
 }
 
-/* === Основной контент: заголовок и подзаголовок === */
-.main-content {
-  margin-top: 120px;
-  margin-left: 60px;
-  z-index: 2;
+/* === ОСНОВНОЙ ТЕКСТ СЛЕВА === */
+
+
+.hero-main-title {
+  font-size: 55px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin: 25% 0 0 30px;
+  letter-spacing: 0.5px;
   max-width: 600px;
 }
 
-/* === Крупный заголовок === */
-.main-title {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 32px;
-  margin-top: 0;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-
-/* === Подзаголовок === */
-.main-subtitle {
-  font-size: 32px;
+.author {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
   font-weight: 400;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin-left: 30px;
+  margin-top: 10%;
 }
 
-/* === Нижняя навигация === */
-.footer-nav {
-  margin-top: auto;
-  margin-bottom: 80px;
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  font-size: 40px;
-  font-weight: 400;
-  z-index: 2;
-}
-.footer-nav a {
-  color: #fff;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.footer-nav a:hover {
-  opacity: 0.7;
-}
+/* === СТАРТОВАЯ СТРАНИЦА ПРАВАЯ ЧАСТЬ === */
 
-/* === Секция 'о нас' — только текст на фоне === */
-.about-section {
-  width: 100vw;
-  height: 100vh;
-  background: url('img/about-section-bg.svg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  font-family: 'Montserrat', Arial, sans-serif;
-  color: #fff;
+.hero-right {
+  background: #000000;
+  color: #ffffff;
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-start;
-  padding: 80px 0 0 100px;
-  box-sizing: border-box;
+  padding: 32px 40px 0 0;
 }
 
-.about-title {
-  font-size: 72px;
-  font-weight: 700;
-  color: #fff;
-  margin: 0 0 40px 0;
-  background: none;
-  padding: 0;
-}
-.about-card {
-  padding-top: 100px;
-}
+/* === НАВИГАЦИЯ === */
 
-.about-card-text {
+.hero-nav {
+  display: flex;
+  gap: 40px;
   font-size: 22px;
   font-weight: 400;
-  color: #fff;
-  margin-bottom: 40px;
-  line-height: 1.4;
-  max-width: 700px;
-}
-
-.about-more-btn {
-  font-size: 30px;
-  font-weight: 700;
-  color: #fff;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  margin-top: 0;
-  padding: 0;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.about-more-btn:hover {
-  color: #e53c21;
-}
-
-/* === Секция 'услуги' — только текст на фоне === */
-.sevices-section {
-  width: 100vw;
-  height: 100vh;
-  background: url('img/service-section-bg.svg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  font-family: 'Montserrat', Arial, sans-serif;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  justify-content: flex-end;
   align-items: flex-start;
-  justify-content: flex-start;
-  padding: 80px 0 0 100px;
-  box-sizing: border-box;
+  margin-right: 30px;
 }
 
-/* === Адаптивные стили для разных экранов === */
-@media (max-width: 1200px) {
-  .main-title { font-size: 40px; }
-  .main-subtitle { font-size: 20px; }
-  .footer-nav { font-size: 24px; gap: 40px; }
-  .main-content { max-width: 90vw; margin-left: 20px; }
-  .header { margin-left: 20px; }
-  .btn-login { right: 20px; }
-}
-@media (max-width: 700px) {
-  .main-title { font-size: 24px; }
-  .main-subtitle { font-size: 14px; }
-  .footer-nav { font-size: 16px; gap: 16px; margin-bottom: 20px; }
-  .main-content { margin-top: 60px; }
-  .header { margin-top: 10px; margin-left: 10px; }
-  .btn-login { top: 10px; right: 10px; font-size: 14px; padding: 4px 16px; }
+.hero-nav a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 4px 16px;
+  border-radius: 12px;
+  transition: color 0.2s, background 0.2s, border 0.2s;
+  border: 2px solid transparent;
 }
 
-@media (max-width: 1100px) {
-  .about-title { font-size: 48px; }
-  .about-card-title { font-size: 28px; }
-  .about-card-text { font-size: 16px; }
+.hero-nav a:hover {
+  background: #fff;
+  color: #000;
+  border: 2px solid #fff;
 }
-@media (max-width: 800px) {
-  .about-section { padding: 40px 10px 0 10px; align-items: center; }
-  .about-title { text-align: center; }
-  .about-card-text { max-width: 100%; }
-} 
+
+/* === СТАРТОВАЯ СТРАНИЦА ТЕКСТ СПРАВА === */
+
+.hero-chinese-text {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 65px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  text-align: right;
+  margin: 25% 30px 0px 0px;
+}
+
+.hero-subtitle {
+  font-size: 32px;
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  margin-right: 30px;
+  text-align: right;
+  margin-top: 40%;
+}
