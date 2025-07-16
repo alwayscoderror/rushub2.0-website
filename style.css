@@ -1,4 +1,4 @@
-/* === Глобальные стили === */
+/* === ГЛОБАЛЬНЫЕ СТИЛИ === */
 html, body {
   font-family: 'Montserrat', Arial, sans-serif;
   height: 100%;
@@ -108,8 +108,8 @@ html, body {
 
 .hero-nav a:hover {
   background: #fff;
-  color: #000;
-  border: 2px solid #fff;
+  color: #000000;
+  border: 2px solid #ffffff;
 }
 
 /* === СТАРТОВАЯ СТРАНИЦА ТЕКСТ СПРАВА === */
@@ -130,4 +130,128 @@ html, body {
   margin-right: 30px;
   text-align: right;
   margin-top: 40%;
+}
+
+/* === БЛОК О НАС + 1-й СЛОЙ=== */
+
+.about-section {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-header {
+  color: #ffffff;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;           /* или auto + padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+}
+
+/* === БЛОК О НАС 2-й СЛОЙ === */
+
+.about-main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 480px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* === БЛОК О НАС 2-й СЛОЙ ЛЕВАЯ СТОРОНА=== */
+
+.about-main-left {
+  background: #000000;
+  color: #ffffff;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 0px 48px 0px;
+  margin: 40px 0px 40px 0px;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+  min-width: 0;
+}
+
+.about-main-text {
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 32px 30px 32px 70px;
+}
+
+.about-more-btn {
+  font-size: 22px;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 24px;
+  padding: 10px 32px;
+  margin: 0px 60% 0px 70px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s;
+}
+.about-more-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* === БЛОК О НАС 2-й СЛОЙ ПРАВАЯ СТОРОНА=== */
+
+.about-main-right {
+  background: #AF2C33;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  min-width: 0;
+  overflow: visible;
+}
+
+.about-main-photo {
+  width: 400px;
+  max-width: 90%;
+  border-radius: 32px;
+  margin-top: -30px;      /* фото выходит вверх */
+  margin-bottom: -60px;   /* фото выходит вниз */
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+}
+
+/* === БЛОК О НАС 3-й СЛОЙ === */
+
+.about-quote-block {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 70px;
+}
+
+.about-quote {
+  font-size: 26px;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.about-ceo {
+  font-size: 20px;
+  font-style: italic;
+  color: #fff;
+  opacity: 0.8;
 }
