@@ -165,8 +165,6 @@ html, body {
   width: 100%;
   min-height: 480px;
   margin: 0 auto;
-  position: relative;
-  z-index: 1;
 }
 
 /* === БЛОК О НАС 2-й СЛОЙ ЛЕВАЯ СТОРОНА=== */
