@@ -147,15 +147,16 @@ html, body {
 
 .about-header {
   color: #ffffff;
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 48px;
+  font-size: 70px;
   font-weight: 400;
   text-align: center;
-  height: 140px;           /* или auto + padding */
+  height: 140px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 30px;
 }
 
 /* === БЛОК О НАС 2-й СЛОЙ === */
@@ -180,7 +181,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   padding: 48px 0px 48px 0px;
-  margin: 40px 0px 40px 0px;
+  margin: 80px 0px 80px 0px;
   border-top-right-radius: 32px;
   border-bottom-right-radius: 32px;
   min-width: 0;
@@ -212,7 +213,6 @@ html, body {
 /* === БЛОК О НАС 2-й СЛОЙ ПРАВАЯ СТОРОНА=== */
 
 .about-main-right {
-  background: #AF2C33;
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
@@ -224,8 +224,7 @@ html, body {
 }
 
 .about-main-photo {
-  width: 400px;
-  max-width: 90%;
+  width: 500px;
   border-radius: 32px;
   margin-top: -30px;      /* фото выходит вверх */
   margin-bottom: -60px;   /* фото выходит вниз */
@@ -235,15 +234,16 @@ html, body {
 /* === БЛОК О НАС 3-й СЛОЙ === */
 
 .about-quote-block {
-  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 70px;
+  padding-left: 70px;
+  margin-top: -50px;
+  margin-bottom: 50px;
 }
 
 .about-quote {
-  font-size: 26px;
+  font-size: 25px;
   font-style: italic;
   color: #fff;
   margin-bottom: 8px;
