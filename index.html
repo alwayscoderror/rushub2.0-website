@@ -9,15 +9,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="hero-section">
+    <header class="sticky-header">
+        <div class="hero-logo-row">
+          <img src="img/rushub_logo.svg" alt="Логотип" class="hero-logo">
+          <div class="hero-title">
+            Русско-Азиатский хаб<br>
+            Высшего образования и Экотуризма
+          </div>
+        </div>
+        <nav class="hero-nav">
+          <a href="#about">о нас</a>
+          <a href="#services">услуги</a>
+          <a href="#contacts">контакты</a>
+        </nav>
+    </header>
+    <main>
+      <section class="hero-section">
         <div class="hero-left">
-            <div class="hero-logo-row">
-                <img src="img/rushub_logo.svg" alt="logo" class="hero-logo">
-                <div class="hero-title">
-                Русско-Азиатский хаб<br>
-                Высшего образования и Экотуризма
-                </div>
-            </div>
             <h1 class="hero-main-title">
                 ПУТЬ В ТЫСЯЧУ ЛИ<br>
                 НАЧИНАЕТСЯ<br>
@@ -28,11 +36,6 @@
             </div>
         </div>
         <div class="hero-right">
-            <nav class="hero-nav">
-                <a href="#about">о нас</a>
-                <a href="#services">услуги</a>
-                <a href="#contacts">контакты</a>
-            </nav>
             <div class="hero-chinese-text">
                 千里之行，始于足下
             </div>
@@ -40,8 +43,8 @@
                 сделайте его вместе с нами!
             </div>
         </div>
-    </section>
-    <section id="about" class="about-section">
+      </section>
+      <section id="about" class="about-section">
         <div class="about-header">
           о нас
         </div>
@@ -68,10 +71,29 @@
               CEO Иванов Иван
             </div>
           </div>
-    </section>
-    <section id="services" class="services-section">
-        
-    </section>
+      </section>
+      <section id="services"class="services-section">
+        <div class="services-header">услуги</div>
+        <div class="services-grid">
+          <div class="services-row">
+            <button class="service-card">визовый центр</button>
+            <div class="service-desc">оформление визы в Китай за 3 дня</div>
+          </div>
+          <div class="services-row">
+            <div class="service-desc">перевод документов с/на китайский язык</div>
+            <button class="service-card">бюро переводов</button>
+          </div>
+          <div class="services-row">
+            <button class="service-card">школа китайского</button>
+            <div class="service-desc">обучение языку от HSK 1 до HSK 6</div>
+          </div>
+          <div class="services-row">
+            <div class="service-desc">учёба в лучших вузах Китая</div>
+            <button class="service-card">образование в Китае</button>
+          </div>
+        </div>
+      </section>
+    </main>
 </body>
 <footer></footer>
 </html>
