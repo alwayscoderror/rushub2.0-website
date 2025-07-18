@@ -375,3 +375,146 @@ html, body {
   text-align: center;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
+
+
+/* === БЛОК ПАРТНЕРЫ === */
+
+.partners-section {
+  background: #AF2C33;
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.partners-header {
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+}
+
+/* === БЛОК ПАРТНЕРЫ-СЛАЙДЕР === */
+
+.partners-slider-row {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.partners-arrow {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 90px;
+  cursor: pointer;
+  padding: 0 24px;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.partners-arrow:hover {
+  color: #000;
+}
+
+
+/* === БЛОК ПАРТНЕРЫ-ЛОГОТИПЫ === */
+
+.partners-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 80px;
+  margin: 40px auto 0 auto;
+  width: auto;
+  max-width: 1200px;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 220px;
+  /* height: 260px;  уберите фиксированную высоту! */
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+
+.partner-logo-bg {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.partner-logo {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  display: block;
+}
+
+.partner-socials {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+}
+
+.partner-social img {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.partner-social img:hover {
+  transform: scale(1.08);
+}
+
+/* === БЛОК ПАРТНЕРЫ-КНОПКА === */
+
+.partners-more-btn {
+  margin: 10% auto 0 auto;
+  display: block;
+  background: #fff;
+  color: #000;
+  font-size: 28px;
+  font-weight: 400;
+  border: none;
+  border-radius: 28px;
+  padding: 16px 40px;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  transition: background 0.2s, color 0.2s;
+}
+
+.partners-more-btn:hover {
+  background: #AF2C33;
+  color: #fff;
+}
