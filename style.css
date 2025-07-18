@@ -440,7 +440,7 @@ html, body {
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
-  gap: 80px;
+  gap: 30px;
   margin: 40px auto 0 auto;
   width: auto;
   max-width: 1200px;
@@ -451,7 +451,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 220px;
+  width: 300px;
   /* height: 260px;  уберите фиксированную высоту! */
   background: none;
   box-shadow: none;
@@ -463,8 +463,8 @@ html, body {
   background: #fff;
   border-radius: 24px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  width: 220px;
-  height: 220px;
+  width: 300px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
