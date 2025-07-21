@@ -196,7 +196,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   padding: 48px 0px 48px 0px;
-  margin: 80px 0px 80px 0px;
+  margin-top: 60px;
   border-top-right-radius: 32px;
   border-bottom-right-radius: 32px;
   min-width: 0;
@@ -258,7 +258,7 @@ html, body {
 .about-team {
   text-align: right;
   max-width: 600px; /* та же ширина, что и у фото */
-  font-size: 20px;
+  font-size: 23px;
   font-style: italic;
   color: #fff;
 }
@@ -307,8 +307,7 @@ html, body {
   flex-direction: column;
   gap: 32px; /* расстояние между рядами */
   width: auto;
-  margin: 0 70px;
-  padding: 80px 0 60px 0;
+  margin: 60px 70px 0 70px;
   box-sizing: border-box;
 }
 
@@ -440,7 +439,7 @@ html, body {
   justify-content: center;
   align-items: flex-end;
   gap: 30px;
-  margin: 40px auto 0 auto;
+  margin: 60px auto 0 auto;
   width: auto;
   max-width: 1200px;
 }
@@ -460,7 +459,7 @@ html, body {
 
 .partner-logo-bg {
   background: #fff;
-  border-radius: 24px;
+  border-radius: 32px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
   width: 300px;
   height: 300px;
@@ -468,6 +467,11 @@ html, body {
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+}
+
+.partner-logo-bg:hover {
+  background: #000;
 }
 
 .partner-logo {
