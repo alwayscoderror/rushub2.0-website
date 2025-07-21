@@ -72,7 +72,7 @@ html, body {
 
 .hero-nav {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   font-size: 22px;
   font-weight: 400;
   justify-content: flex-end;
@@ -157,7 +157,6 @@ html, body {
   background: #AF2C33;
   color: #ffffff;
   width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -278,10 +277,7 @@ html, body {
   background: #AF2C33;
   color: #fff;
   width: 100%;
-  min-height: 100vh;
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
 }
@@ -335,12 +331,11 @@ html, body {
   flex: 1 1 0;
   box-sizing: border-box;
   text-align: center;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
   cursor: pointer;
   border: none;
   outline: none;
   text-decoration: none;
-  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+  transition: transform 0.2s;
 }
 
 .service-card:active {
@@ -354,8 +349,7 @@ html, body {
 }
 
 .service-card:hover {
-  background: #ffffff;
-  color: #000000;
+  transform: scale(1.05);
 }
 
 .service-desc {
@@ -450,7 +444,6 @@ html, body {
   align-items: center;
   justify-content: flex-start;
   width: 300px;
-  /* height: 260px;  уберите фиксированную высоту! */
   background: none;
   box-shadow: none;
   padding: 0;
@@ -458,7 +451,7 @@ html, body {
 }
 
 .partner-logo-bg {
-  background: #fff;
+  background: #AF2C33;
   border-radius: 32px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
   width: 300px;
@@ -467,11 +460,11 @@ html, body {
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
-  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s, transform 0.2s;
 }
 
 .partner-logo-bg:hover {
-  background: #000;
+  transform: scale(1.08);
 }
 
 .partner-logo {
@@ -503,21 +496,19 @@ html, body {
 /* === БЛОК ПАРТНЕРЫ-КНОПКА === */
 
 .partners-more-btn {
-  margin: 10% auto 0 auto;
+  margin: 7% auto 0 auto;
   display: block;
-  background: #fff;
-  color: #000;
+  background: #000000;
+  color: #ffffff;
   font-size: 28px;
   font-weight: 400;
   border: none;
   border-radius: 28px;
   padding: 16px 40px;
   cursor: pointer;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-  transition: background 0.2s, color 0.2s;
+  transition: transform 0.2s;
 }
 
 .partners-more-btn:hover {
-  background: #AF2C33;
-  color: #fff;
+  transform: scale(1.08);
 }
