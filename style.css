@@ -233,42 +233,42 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   position: relative;
   min-width: 0;
   overflow: visible;
+  margin-top: 80px;
+  gap: 24px; /* добавить отступ между фото и цитатой */
 }
 
 .about-main-photo {
-  width: 500px;
+  width: 600px; /* увеличить ширину фото */
   border-radius: 32px;
   box-shadow: 0 4px 32px rgba(0,0,0,0.10);
-
+  margin-bottom: 0; /* если был margin, убираем его */
 }
 
-/* === БЛОК О НАС 3-й СЛОЙ === */
-
-.about-quote-block {
+.quote-container {
+  width: 600px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  padding-right: 110px;
-  margin-top: -50px;
-  margin-bottom: 50px;
+  align-items: flex-end; /* выравнивание текста по правому краю */
 }
 
-.about-quote {
-  font-size: 25px;
-  font-style: italic;
-  color: #fff;
-  margin-bottom: 8px;
-  text-align: right;
-}
-
+.about-quote,
 .about-team {
+  text-align: right;
+  max-width: 600px; /* та же ширина, что и у фото */
   font-size: 20px;
   font-style: italic;
   color: #fff;
+}
+
+.about-quote {
+  margin-bottom: 8px;
+  max-width: 600px; /* ограничить ширину равной ширине фото */
+}
+
+.about-team {
   opacity: 0.8;
 }
 
