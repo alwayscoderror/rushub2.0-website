@@ -577,6 +577,11 @@ html, body {
   margin-bottom: 0;
 }
 
+.feedback-input::placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
 .feedback-textarea {
   font-size: 20px;
   padding: 16px 24px;
@@ -587,6 +592,11 @@ html, body {
   min-height: 220px;
   margin-bottom: 32px;
   resize: none;
+}
+
+.feedback-textarea::placeholder {
+  color: #ffffff;
+  opacity: 0.7;
 }
 
 .feedback-btn {
@@ -602,7 +612,7 @@ html, body {
 }
 
 .feedback-map {
-  width: 100%;
+  width: 50%;
   height: 400px;
   border-radius: 32px;
   overflow: hidden;
@@ -614,4 +624,70 @@ html, body {
   height: 100%;
   border: none;
   display: block;
+}
+
+/* === БЛОК ФУТЕР === */
+
+.site-footer {
+  background: #444;
+  color: #fff;
+  padding: 48px 0 24px 0;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.footer-social img {
+  width: 100px;
+  height: 100px;
+  background: #444;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.footer-social img:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transform: scale(1.08);
+}
+
+.footer-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 220px;
+}
+
+.footer-phone {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.footer-label {
+  color: #bdbdbd;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.footer-copyright {
+  color: #bdbdbd;
+  font-size: 12px;
+  margin-top: 32px;
 }
