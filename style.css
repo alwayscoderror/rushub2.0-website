@@ -614,9 +614,7 @@ html, body {
 .feedback-map {
   width: 50%;
   height: 400px;
-  border-radius: 32px;
-  overflow: hidden;
-  background: #fff;
+  margin-bottom: 16px;
 }
 
 .feedback-map iframe {
@@ -624,6 +622,31 @@ html, body {
   height: 100%;
   border: none;
   display: block;
+  border-radius: 32px;
+}
+
+.map-caption {
+  font-size: 24px;
+  color: #fff;
+  margin-top: 30px;
+}
+
+.map-caption-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.map-caption-title img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.map-caption-title-text {
+  font-size: 32px;
+  color: #ffffff;
 }
 
 /* === БЛОК ФУТЕР === */
@@ -645,8 +668,8 @@ html, body {
 }
 
 .footer-social img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   background: #444;
   object-fit: contain;
   border-radius: 50%;
