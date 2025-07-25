@@ -415,32 +415,6 @@ main {
   margin: 0;
 }
 
-/* === БЛОК ПАРТНЕРЫ-СЛАЙДЕР === */
-
-.partners-slider-row {
-  width: 100%;
-  margin-top: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.partners-arrow {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 90px;
-  cursor: pointer;
-  padding: 0 24px;
-  transition: color 0.2s;
-  user-select: none;
-}
-
-.partners-arrow:hover {
-  color: #000;
-}
-
 
 /* === БЛОК ПАРТНЕРЫ-ЛОГОТИПЫ === */
 
@@ -524,6 +498,7 @@ main {
   padding: 16px 40px;
   cursor: pointer;
   transition: transform 0.2s;
+  text-decoration: none;
 }
 
 .partners-more-btn:hover {
@@ -561,7 +536,7 @@ main {
 .feedback-main {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 48px;
   padding: 0 70px;
@@ -571,7 +546,6 @@ main {
   display: flex;
   flex-direction: column;
   flex: 1 1 0;
-  max-width: 50%;
 }
 
 .feedback-row {
@@ -626,9 +600,10 @@ main {
 }
 
 .feedback-map {
-  width: 50%;
-  height: 400px;
-  margin-bottom: 16px;
+  width: auto;
+  height: 551px;
+  display: flex;
+  flex-direction: column;
 }
 
 .feedback-map iframe {
@@ -823,9 +798,9 @@ main {
   height: 140px;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: left;
   letter-spacing: 1px;
-  padding-right: 70px;
+  padding-left: 70px;
   padding-top: 50px;
   margin: 0;
 }
@@ -913,4 +888,6 @@ main {
   margin: 0;
   opacity: 0.5;
 }
+
+/* === ВИЗОВЫЙ ЦЕНТР: БЛОК "ОПИСАНИЕ"=== */
 
