@@ -6,6 +6,16 @@ html, body {
   padding: 0;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
 /* === СТАРТОВАЯ СТРАНИЦА === */
 
 .hero-section {
@@ -219,7 +229,11 @@ html, body {
   cursor: pointer;
   font-weight: 400;
   transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+  text-align: center;
 }
+
+
 
 .about-more-btn:hover {
   background: #ffffff;
@@ -241,10 +255,10 @@ html, body {
 }
 
 .about-main-photo {
-  width: 600px; /* увеличить ширину фото */
+  width: 600px;
   border-radius: 32px;
   box-shadow: 0 4px 32px rgba(0,0,0,0.10);
-  margin-bottom: 0; /* если был margin, убираем его */
+  margin-bottom: 0;
 }
 
 .quote-container {
@@ -520,12 +534,13 @@ html, body {
 
 .feedback-section {
   background: #AF2C33;
-  color: #fff;
+  color: #ffffff;
   width: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   margin: 0;
+  padding-bottom: 70px;
 }
 
 .feedback-title {
@@ -549,8 +564,7 @@ html, body {
   justify-content: flex-start;
   align-items: flex-start;
   gap: 48px;
-  width: auto;
-  margin: 60px 70px 0 70px;
+  padding: 0 70px;
 }
 
 .feedback-form {
@@ -631,12 +645,17 @@ html, body {
   margin-top: 30px;
 }
 
-.map-caption-title {
+.map-caption-title, .timetable {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
+
+.timetable {
+  margin-top: 10px;
+}
+
 
 .map-caption-title img {
   width: 32px;
@@ -646,6 +665,17 @@ html, body {
 
 .map-caption-title-text {
   font-size: 32px;
+  color: #ffffff;
+}
+
+.timetable img {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+
+.timetable-text {
+  font-size: 24px;
   color: #ffffff;
 }
 
@@ -714,3 +744,173 @@ html, body {
   font-size: 12px;
   margin-top: 32px;
 }
+
+
+/* === О НАС: отдельная страница БЛОК "ОПИСАНИЕ"=== */
+
+
+.about-desc-section {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.about-desc-title {
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.about-desc-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.about-desc-content-text h3 {
+  font-size: 50px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.about-desc-content-text p {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.about-desc-content-img img {
+  width: 600px;
+  height: 450px;
+  border-radius: 32px;
+}
+
+
+/* === О НАС: отдельная страница БЛОК "КОМАНДА"=== */
+
+
+.about-team-section {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.about-team-title {
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  letter-spacing: 1px;
+  padding-right: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.about-team-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.ceo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ceo-card img {
+  width: 400px;
+  height: 400px;
+}
+
+.ceo-card p {
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+/* === О НАС: отдельная страница БЛОК "ЦИФРЫ"=== */
+
+.about-numbers-section {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.about-numbers-title {
+  color: #ffffff;
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.all-numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.big-numbers-small-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+
+.big-numbers-small-text p:first-child {
+  font-size: 150px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.big-numbers-small-text p:last-child {
+  font-size: 50px;
+  margin: 0;
+  opacity: 0.5;
+}
+
