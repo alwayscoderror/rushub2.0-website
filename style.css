@@ -601,7 +601,7 @@ main {
 
 .feedback-map {
   width: auto;
-  height: 551px;
+  height: 591px;
   display: flex;
   flex-direction: column;
 }
@@ -612,47 +612,36 @@ main {
   border: none;
   display: block;
   border-radius: 32px;
+  margin-bottom: 30px;
 }
 
 .map-caption {
-  font-size: 24px;
-  color: #fff;
-  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  gap: 10px;
 }
 
-.map-caption-title, .timetable {
+.caption-element {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-}
-
-.timetable {
-  margin-top: 10px;
+  justify-content: left;
 }
 
 
-.map-caption-title img {
+.caption-element img {
   width: 32px;
   height: 32px;
   margin-right: 8px;
 }
 
-.map-caption-title-text {
-  font-size: 32px;
-  color: #ffffff;
-}
-
-.timetable img {
-  width: 32px;
-  height: 32px;
-  margin-right: 8px;
-}
-
-.timetable-text {
+.caption-element p {
+  margin: 0;
   font-size: 24px;
-  color: #ffffff;
+  gap: 30px;
 }
+
 
 /* === БЛОК ФУТЕР === */
 
@@ -784,6 +773,7 @@ main {
   background: #AF2C33;
   color: #ffffff;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -807,26 +797,33 @@ main {
 
 .about-team-content {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+  gap: 50px;
   flex-wrap: wrap;
   padding-left: 70px;
   padding-right: 70px;
 }
 
-.ceo-card {
+.about-team-content-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.member-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
 
-.ceo-card img {
-  width: 400px;
-  height: 400px;
+.member-card img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
 
-.ceo-card p {
+.member-card p {
   font-size: 20px;
   text-align: center;
   font-style: italic;
@@ -1003,6 +1000,7 @@ main {
 .price-card-travel p, .extra-fee p {
   font-size: 30px;
   color: #AF2C33;
+  font-weight: 700;
 }
 
 .nota-bene {
@@ -1078,6 +1076,7 @@ main {
 .price-card-study p {
   font-size: 30px;
   color: #AF2C33;
+  font-weight: 700;
 }
 
 /* === ВИЗОВЫЙ ЦЕНТР: БЛОК "Бизнес"=== */
@@ -1145,6 +1144,7 @@ main {
 .price-card-business p {
   font-size: 30px;
   color: #AF2C33;
+  font-weight: 700;
 }
 
 
@@ -1177,7 +1177,7 @@ main {
 
 .visa-section-info-content p {
   padding-left: 70px;
-  font-size: 50px;
+  font-size: 55px;
   line-height: 1.5;
   margin: 0;
 }
