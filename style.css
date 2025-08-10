@@ -365,7 +365,7 @@ main {
 }
 
 .service-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .service-desc {
@@ -381,13 +381,13 @@ main {
   flex: 1 1 0;
   box-sizing: border-box;
   text-align: center;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
 }
 
 
-/* === БЛОК ПАРТНЕРЫ === */
+/* === БЛОК МЕДИА === */
 
-.partners-section {
+.media-section {
   background: #AF2C33;
   color: #fff;
   width: 100%;
@@ -400,7 +400,7 @@ main {
   align-items: flex-start;
 }
 
-.partners-header {
+.media-header {
   color: #ffffff;
   font-size: 70px;
   font-weight: 400;
@@ -416,9 +416,9 @@ main {
 }
 
 
-/* === БЛОК ПАРТНЕРЫ-ЛОГОТИПЫ === */
+/* === БЛОК МЕДИА-ЛОГОТИПЫ === */
 
-.partners-row {
+.media-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -429,7 +429,7 @@ main {
   max-width: 1200px;
 }
 
-.partner-card {
+.media-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -441,7 +441,7 @@ main {
   margin: 0;
 }
 
-.partner-logo-bg {
+.media-logo-bg {
   background: #AF2C33;
   border-radius: 32px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.10);
@@ -454,18 +454,18 @@ main {
   transition: box-shadow 0.2s, background 0.2s, color 0.2s, transform 0.2s;
 }
 
-.partner-logo-bg:hover {
+.media-logo-bg:hover {
   transform: scale(1.08);
 }
 
-.partner-logo {
+.media-logo {
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
   display: block;
 }
 
-.partner-socials {
+.media-socials {
   display: flex;
   flex-direction: row;
   gap: 18px;
@@ -474,19 +474,19 @@ main {
   margin-top: 0;
 }
 
-.partner-social img {
-  width: 44px;
-  height: 44px;
+.media-social img {
+  width: 50px;
+  height: 50px;
   border-radius: 12px;
   transition: box-shadow 0.2s, transform 0.2s;
 }
-.partner-social img:hover {
+.media-social img:hover {
   transform: scale(1.08);
 }
 
 /* === БЛОК ПАРТНЕРЫ-КНОПКА === */
 
-.partners-more-btn {
+.media-more-btn {
   margin: 7% auto 0 auto;
   display: block;
   background: #000000;
@@ -501,7 +501,7 @@ main {
   text-decoration: none;
 }
 
-.partners-more-btn:hover {
+.media-more-btn:hover {
   transform: scale(1.08);
 }
 
@@ -934,9 +934,102 @@ main {
   height: 500px;
 }
 
+/* === ВИЗОВЫЙ ЦЕНТР: БЛОК "УСЛУГИ"=== */
+
+.visa-section-list {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.visa-section-list h2 {
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.visa-section-list-grid {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0 70px;
+  height: auto;
+}
+
+.visa-section-list-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 45%;
+}
+
+.visa-section-list-row {
+  background-color:#ffffff;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 50px 0;
+  border-radius: 32px;
+  transition: transform 0.2s;
+}
+
+.visa-section-list-item {
+  padding-left: 30px;
+}
+
+.visa-section-list-row:hover {
+  transform: scale(1.08);
+}
+
+.visa-section-list-item h3 {
+  margin: 0;
+  font-size: 30px;
+  color: #AF2C33;
+}
+
+.visa-price {
+  padding-left: 60px;
+  margin: 0;
+  font-size: 20px;
+}
+
+.visa-desc {
+  margin: 0;
+  padding-top: 10px;
+  padding-right: 30px;
+  font-size: 20px;
+}
+
+.visa-section-list-item-title {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.visa-section-list-item-title img {
+  width: 50px;
+  height: 50px;
+}
+
+
 /* === ВИЗОВЫЙ ЦЕНТР: БЛОК "Туризм"=== */
 
-.visa-section-travel-prices {
+/* .visa-section-travel-prices {
   background: #AF2C33;
   color: #ffffff;
   width: 100%;
@@ -985,7 +1078,7 @@ main {
 }
 
 .price-card-travel:hover, .extra-fee:hover {
-  transform: scale(1.04);
+  transform: scale(1.08);
 }
 
 .price-card-travel img, .extra-fee img {
@@ -1022,11 +1115,11 @@ main {
   padding-left: 70px;
   line-height: 1.5;
   margin: 0;
-}
+} */
 
 /* === ВИЗОВЫЙ ЦЕНТР: БЛОК "Учеба"=== */
 
-.visa-section-study-prices {
+/* .visa-section-study-prices {
   background: #AF2C33;
   color: #ffffff;
   width: 100%;
@@ -1072,7 +1165,7 @@ main {
 }
 
 .price-card-study:hover {
-  transform: scale(1.04);
+  transform: scale(1.08);
 }
 
 .price-card-study img {
@@ -1102,11 +1195,11 @@ main {
   color: #ffffff;
   font-weight: 400;
   padding: 10px 20px;
-}
+} */
 
 /* === ВИЗОВЫЙ ЦЕНТР: БЛОК "Бизнес"=== */
 
-.visa-section-business-prices {
+/* .visa-section-business-prices {
   background: #AF2C33;
   color: #ffffff;
   width: 100%;
@@ -1151,7 +1244,7 @@ main {
 }
 
 .price-card-business:hover {
-  transform: scale(1.04);
+  transform: scale(1.08);
 }
 
 .price-card-business img {
@@ -1181,7 +1274,7 @@ main {
   color: #ffffff;
   font-weight: 400;
   padding: 10px 20px;
-}
+} */
 
 /* === ВИЗОВЫЙ ЦЕНТР: БЛОК "Важно"=== */
 
@@ -1410,7 +1503,7 @@ main {
 }
 
 .transl-section-chinese-card:hover {
-  transform: scale(1.04);
+  transform: scale(1.08);
 }
 
 .transl-section-chinese-card img {
@@ -1428,8 +1521,8 @@ main {
 
 .transl-section-chinese-card p {
   font-size: 30px;
-  color: #AF2C33;
-  font-weight: 700;
+  color: #000000;
+  font-weight: 400;
 }
 
 /* === БЮРО ПЕРЕВОДОВ: БЛОК "Английский"=== */
@@ -1503,7 +1596,7 @@ main {
 }
 
 .transl-section-english-card:hover {
-  transform: scale(1.04);
+  transform: scale(1.08);
 }
 
 .transl-section-english-card img {
@@ -1521,8 +1614,8 @@ main {
 
 .transl-section-english-card p {
   font-size: 30px;
-  color: #AF2C33;
-  font-weight: 700;
+  color: #000000;
+  font-weight: 400;
 }
 
 .transl-section-english h4 {
@@ -1631,4 +1724,187 @@ main {
   text-decoration: none;
   font-size: 50px;
   margin: 0;
+}
+
+/* === МЕДИА: БЛОК "СТАРТ"=== */
+
+.socials-section-start {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.socials-section-start h2 {
+  font-size: 70px;
+  font-weight: 400;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.socials-section-item {
+  display: flex;
+  padding: 0 70px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.socials-section-item:nth-child(3) div {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.socials-section-item:nth-child(5) div {
+  align-items: flex-end;
+  text-align: right;
+}
+
+
+.socials-section-item>img {
+  width: 400px;
+  height: 400px;
+}
+
+
+.socials-section-item-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+}
+
+.socials-section-item-desc h3 {
+  margin: 0;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.socials-section-item-desc-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.socials-section-item-desc p {
+  margin: 0;
+  font-size: 25px;
+}
+
+/* === ОБРАЗОВАНИЕ В КИТАЕ: БЛОК "СТАРТ"=== */
+
+
+.study-section-start {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.study-section-start h2 {
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.study-section-start-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.study-section-start-content img {
+  width: 500px;
+  height: 500px;
+}
+
+.study-section-start-content p {
+  font-size: 45px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* === ОБРАЗОВАНИЕ В КИТАЕ: БЛОК "ПАРТНЕРЫ"=== */
+
+.study-section-partners {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.study-section-partners h2 {
+  font-size: 70px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.study-section-partners-column {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+}
+
+.study-section-partners-row {
+  display: flex;
+  justify-content:center;
+  gap: 100px;
+}
+
+.study-section-partners-row-unit img {
+  width: 250px;
+  height: 250px;
+  background-color:#ffffff;
+  border-radius: 50%;
+}
+
+.study-section-partners-row-unit h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.study-section-partners-row-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
