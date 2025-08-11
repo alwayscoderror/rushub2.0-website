@@ -1886,25 +1886,316 @@ main {
 
 .study-section-partners-row {
   display: flex;
-  justify-content:center;
+  justify-content: center;
+  align-items: center;
   gap: 100px;
 }
 
 .study-section-partners-row-unit img {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   background-color:#ffffff;
   border-radius: 50%;
 }
 
-.study-section-partners-row-unit h3 {
+.study-section-partners-row-unit a {
   font-size: 20px;
   margin: 0;
+  font-weight: 400;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 32px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.study-section-partners-row-unit a:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .study-section-partners-row-unit {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
+}
+
+.study-section-partners-row-addition {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+/* === ОБРАЗОВАНИЕ В КИТАЕ: БЛОК "Harbin Institute of Technology (HIT)"=== */
+
+.univ-hit {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.univ-hit h2 {
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.uni-hit-body {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: start;
+}
+
+.uni-hit-body img {
+  width: 650px;
+  height: 518px;
+  border-radius: 32px;
+}
+
+.uni-hit-body-text h3 {
+  font-size: 40px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.uni-hit-body-text p {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 30px;
+  line-height: 1.5;
+}
+
+.uni-hit-body-text img {
+  width: 40px;
+  height: 40px;
+}
+
+.uni-hit-body-text>p>img {
+  width: 20px;
+  height: 20px;
+}
+
+.uni-hit-body-text>a>img {
+  width: 40px;
+  height: 40px;
+}
+
+.uni-hit-body-text a {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 32px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
+}
+
+.uni-hit-body-text a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* === ОБРАЗОВАНИЕ В КИТАЕ: БЛОК "Lanzhou University"=== */
+
+.univ-lanzhou {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.univ-lanzhou h2 {
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.uni-lanzhou-body {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: start;
+}
+
+.uni-lanzhou-body img {
+  width: 650px;
+  height: 433px;
+  border-radius: 32px;
+}
+
+.uni-lanzhou-body-text h3 {
+  font-size: 40px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.uni-lanzhou-body-text p {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 30px;
+  line-height: 1.5;
+}
+
+.uni-lanzhou-body-text img {
+  width: 40px;
+  height: 40px;
+}
+
+.uni-lanzhou-body-text>p>img {
+  width: 20px;
+  height: 20px;
+}
+
+.uni-lanzhou-body-text>a>img {
+  width: 40px;
+  height: 40px;
+}
+
+.uni-lanzhou-body-text a {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 32px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.uni-lanzhou-body-text a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+/* === ОБРАЗОВАНИЕ В КИТАЕ: БЛОК "Tongji University"=== */
+
+.univ-tongji {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.univ-tongji h2 {
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.uni-tongji-body {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: start;
+}
+
+.uni-tongji-body img {
+  width: 650px;
+  height: 433px;
+  border-radius: 32px;
+}
+
+.uni-tongji-body-text h3 {
+  font-size: 40px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.uni-tongji-body-text p {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 30px;
+  line-height: 1.5;
+}
+
+.uni-tongji-body-text img {
+  width: 40px;
+  height: 40px;
+}
+
+.uni-tongji-body-text>p>img {
+  width: 20px;
+  height: 20px;
+}
+
+.uni-tongji-body-text>a>img {
+  width: 40px;
+  height: 40px;
+}
+
+.uni-tongji-body-text a {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 32px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.uni-tongji-body-text a:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
