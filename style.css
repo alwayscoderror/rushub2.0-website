@@ -365,7 +365,7 @@ main {
 }
 
 .service-card:hover {
-  transform: scale(1.08);
+  transform: scale(1.03);
 }
 
 .service-desc {
@@ -766,10 +766,10 @@ main {
 }
 
 
-/* === О НАС: отдельная страница БЛОК "КОМАНДА"=== */
+/* === О НАС: отдельная страница БЛОК "Отзывы"=== */
 
 
-.about-team-section {
+.about-reviews-section {
   background: #AF2C33;
   color: #ffffff;
   width: 100%;
@@ -780,7 +780,7 @@ main {
   margin: 0;
 }
 
-.about-team-title {
+.about-reviews-section h2 {
   color: #ffffff;
   font-size: 70px;
   font-weight: 400;
@@ -795,40 +795,89 @@ main {
   margin: 0;
 }
 
-.about-team-content {
+.about-reviews-section-column {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 50px;
-  flex-wrap: wrap;
   padding-left: 70px;
   padding-right: 70px;
 }
 
-.about-team-content-row {
+.about-reviews-section-row {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  gap: 100px;
+  gap: 40px;
 }
 
-.member-card {
+.about-reviews-section-card {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px 30px;
+  border-radius: 32px;
+  width: 30%;
+}
+
+.about-reviews-section-card-links {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px 30px;
+  border-radius: 32px;
+  width: 30%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.about-reviews-section-card>div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+.about-reviews-section-card>div>p {
+  font-size: 30px;
+}
+
+.about-reviews-section-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.about-reviews-section-card-links p {
+  font-size: 30px;
+  margin: 0;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.about-reviews-section-card-links>div {
+  display: flex;
   align-items: center;
 }
 
-.member-card img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+.about-reviews-section-card-links>div>img {
+  width: 50px;
+  height: 50px;
 }
 
-.member-card p {
-  font-size: 20px;
-  text-align: center;
-  font-style: italic;
-  opacity: 0.5;
+.about-reviews-section-card-links>div>a {
+  font-size: 25px;
+  text-decoration: none;
+  color: #000000;
 }
+
+.about-reviews-section-card img {
+  width: 75px;
+  height: 75px;
+  border-radius: 32px;
+}
+
+
+
+
 
 /* === О НАС: отдельная страница БЛОК "ЦИФРЫ"=== */
 
@@ -1924,8 +1973,12 @@ main {
 }
 
 .study-section-partners-row-addition {
+  width: 350px;
+  height: 413px;
+  display: flex;
+  align-items: center;
   margin: 0;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 700;
 }
 
@@ -2199,3 +2252,224 @@ main {
   background-color: #ffffff;
   color: #000000;
 }
+
+/* === ОБРАЗОВАНИЕ В КИТАЕ: БЛОК "East China Normal University"=== */
+
+.univ-ecnu {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.univ-ecnu h2 {
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.uni-ecnu-body {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: start;
+}
+
+.uni-ecnu-body img {
+  width: 650px;
+  height: 433px;
+  border-radius: 32px;
+}
+
+.uni-ecnu-body-text h3 {
+  font-size: 40px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.uni-ecnu-body-text p {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 30px;
+  line-height: 1.5;
+}
+
+.uni-ecnu-body-text img {
+  width: 40px;
+  height: 40px;
+}
+
+.uni-ecnu-body-text>p>img {
+  width: 20px;
+  height: 20px;
+}
+
+.uni-ecnu-body-text>a>img {
+  width: 40px;
+  height: 40px;
+}
+
+.uni-ecnu-body-text a {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 32px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.uni-ecnu-body-text a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+
+/* === ОБРАЗОВАНИЕ В КИТАЕ: БЛОК "South China University of Technology"=== */
+
+.univ-scut {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.univ-scut h2 {
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.uni-scut-body {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: start;
+}
+
+.uni-scut-body img {
+  width: 650px;
+  height: 433px;
+  border-radius: 32px;
+}
+
+.uni-scut-body-text h3 {
+  font-size: 40px;
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.uni-scut-body-text p {
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 30px;
+  line-height: 1.5;
+}
+
+.uni-scut-body-text img {
+  width: 40px;
+  height: 40px;
+}
+
+.uni-scut-body-text>p>img {
+  width: 20px;
+  height: 20px;
+}
+
+.uni-scut-body-text>a>img {
+  width: 40px;
+  height: 40px;
+}
+
+.uni-scut-body-text a {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 400;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 32px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.uni-scut-body-text a:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* === ОБРАЗОВАНИЕ В КИТАЕ: БЛОК "Как поступить?"=== */
+
+.study-section-application {
+  background: #AF2C33;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin: 0;
+}
+
+.study-section-application h2 {
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  letter-spacing: 1px;
+  padding-left: 70px;
+  padding-top: 50px;
+  margin: 0;
+}
+
+.study-section-application p {
+  margin: 0 70px;
+  font-size: 33px;
+  line-height: 2;
+}
+
+.study-section-application img {
+  width: 25px;
+  height: 25px;
+}
+
+
