@@ -69,7 +69,7 @@
           </div>
         </div>
       </section>
-      <sectio id="hit" class="univ-hit">
+      <section id="hit" class="univ-hit">
         <h2>Harbin Institute of Technology (HIT)</h2>
         <div class="uni-hit-body">
           <img src="img/hit_uni.jpg" alt="">
@@ -83,7 +83,7 @@
               робототехнике, машиностроении, AI и IT<br>
               4. Много программ на английском языке<br>
               5. Сильное международное сотрудничество</p>
-            <a href="">больше информации про HIT <img src="img/icons/telegram.svg" alt=""></a>
+            <a href="https://t.me/easiatour/48" target="_blank">больше информации про HIT <img src="img/icons/telegram.svg" alt=""></a>
           </div>
         </div>
       </section>
@@ -101,7 +101,7 @@
               4. Большое сообщество иностранных студентов<br>
               5. Доступны государственные (CSC), <br>
               провинциальные и университетские гранты</p>
-            <a href="">больше про Lanzhou University <img src="img/icons/telegram.svg" alt=""></a>
+            <a href="https://t.me/easiatour/69" target="_blank">больше про Lanzhou University <img src="img/icons/telegram.svg" alt=""></a>
           </div>
         </div>
       </section>
@@ -120,7 +120,7 @@
               4. Программы на английском и китайском языках<br>
               5. Отличные возможности для стажировок<br>
               в международных компаниях</p>
-            <a href="">больше про Tongji University <img src="img/icons/telegram.svg" alt=""></a>
+            <a href="https://t.me/easiatour/54" target="_blank">больше про Tongji University <img src="img/icons/telegram.svg" alt=""></a>
           </div>
         </div>
       </section>
@@ -137,7 +137,7 @@
               3. Широкий выбор программ<br>
               4. Красивая зелёная территория кампуса<br>
               5. Активная международная жизнь</p>
-            <a href="">больше про ECNU <img src="img/icons/telegram.svg" alt=""></a>
+            <a href="https://t.me/easiatour/64" target="_blank">больше про ECNU <img src="img/icons/telegram.svg" alt=""></a>
           </div>
         </div>
       </section>
@@ -156,7 +156,7 @@
               4. Город с мягким климатом и бурной экономикой<br>
               5. Возможности стажировок в компаниях юга Китая <br>
               (включая Гонконг и Шэньчжэнь)</p>
-            <a href="">больше про SCUT <img src="img/icons/telegram.svg" alt=""></a>
+            <a href="https://t.me/easiatour/60" target="_blank">больше про SCUT <img src="img/icons/telegram.svg" alt=""></a>
           </div>
         </div>
       </section>
@@ -172,16 +172,16 @@
       <section id="feedback" class="feedback-section">
         <h2 class="feedback-title">напишите нам</h2>
         <div class="feedback-main">
-          <form class="feedback-form">
+          <form class="feedback-form" id="feedbackForm" action="php/send_email.php" method="POST">
             <div class="feedback-row">
-              <input type="text" class="feedback-input" placeholder="ваше имя">
-              <input type="email" class="feedback-input" placeholder="ваш email">
+              <input type="text" class="feedback-input" name="name" placeholder="ваше имя" required>
+              <input type="email" class="feedback-input" name="email" placeholder="ваш email" required>
             </div>
             <div class="feedback-row">
-              <input type="text" class="feedback-input" placeholder="ваша фамилия">
-              <input type="email" class="feedback-input" placeholder="повторите email">
+              <input type="text" class="feedback-input" name="surname" placeholder="ваша фамилия" required>
+              <input type="email" class="feedback-input" placeholder="повторите email" required>
             </div>
-            <textarea class="feedback-textarea" placeholder="ваше сообщение"></textarea>
+            <textarea class="feedback-textarea" name="message" placeholder="ваше сообщение" required></textarea>
             <button type="submit" class="feedback-btn">отправить</button>
           </form>
           <div class="feedback-map">
@@ -232,5 +232,55 @@
           © 2025 ООО "РУССКО-АЗИАТСКИЙ ХАБ ВЫСШЕГО ОБРАЗОВАНИЯ И ЭКОТУРИЗМА" ИНН  9729351476 КПП 772901001 ОГРН 1237700507494 Юридический адрес: 119330, г. Москва, ул Дружбы, д. 10А
         </div>
     </footer>
-</body>
-</html>
+
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Сообщение отправлено!</h3>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <p>Спасибо! Ваше сообщение успешно отправлено. Мы свяжемся с вами в ближайшее время.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-btn" data-close>Закрыть</button>
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('feedbackForm');
+        const modal = document.getElementById('successModal');
+        const submitBtn = form.querySelector('.feedback-btn');
+      
+        const showModal = () => { modal.style.display = 'block'; };
+        const closeModal = () => { modal.style.display = 'none'; };
+      
+        modal.addEventListener('click', e => {
+          if (e.target === modal || e.target.matches('.close, [data-close]')) closeModal();
+        });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+      
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault(); // важное: убираем переход
+          submitBtn.disabled = true; const oldText = submitBtn.textContent; submitBtn.textContent = 'Отправляется...';
+          try {
+            const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+            const data = await res.json().catch(() => ({}));
+            if (res.ok && (data.success !== false)) {
+              form.reset();
+              showModal();
+            } else {
+              alert(data.message || 'Не удалось отправить сообщение.');
+            }
+          } catch (err) {
+            alert('Ошибка сети. Попробуйте позже.');
+          } finally {
+            submitBtn.disabled = false; submitBtn.textContent = oldText;
+          }
+        });
+      });
+    </script>
+  </body>
+  </html>
