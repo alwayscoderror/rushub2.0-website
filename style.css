@@ -21,7 +21,7 @@ main {
 .hero-section {
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: #AF2C33;
 }
 
@@ -167,6 +167,7 @@ main {
   background: #AF2C33;
   color: #ffffff;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -192,7 +193,7 @@ main {
   display: flex;
   flex-direction: row;
   width: 100%;
-  min-height: 480px;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -205,8 +206,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 48px 0px 48px 0px;
-  margin-top: 60px;
+  padding: 0 30px 0 70px;
   border-top-right-radius: 32px;
   border-bottom-right-radius: 32px;
   min-width: 0;
@@ -215,7 +215,6 @@ main {
 .about-main-text {
   font-size: 24px;
   line-height: 1.4;
-  margin: 32px 30px 32px 70px;
 }
 
 .about-more-btn {
@@ -225,7 +224,7 @@ main {
   border: 2px solid #fff;
   border-radius: 24px;
   padding: 10px 32px;
-  margin: 0px 60% 0px 70px;
+  margin: 10% 70% 0px 0px;
   cursor: pointer;
   font-weight: 400;
   transition: background 0.2s, color 0.2s;
@@ -250,7 +249,6 @@ main {
   position: relative;
   min-width: 0;
   overflow: visible;
-  margin-top: 80px;
   gap: 24px; /* добавить отступ между фото и цитатой */
 }
 
@@ -290,9 +288,9 @@ main {
 
 .services-section {
   background: #AF2C33;
-  color: #fff;
+  color: #ffffff;
   width: 100%;
-  box-sizing: border-box;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -389,15 +387,11 @@ main {
 
 .media-section {
   background: #AF2C33;
-  color: #fff;
+  color: #ffffff;
   width: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .media-header {
@@ -422,11 +416,9 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-end;
-  gap: 30px;
+  gap: 20px;
+  align-items: center;
   margin: 60px auto 0 auto;
-  width: auto;
-  max-width: 1200px;
 }
 
 .media-card {
@@ -434,7 +426,6 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 300px;
   background: none;
   box-shadow: none;
   padding: 0;
@@ -484,7 +475,7 @@ main {
   transform: scale(1.08);
 }
 
-/* === БЛОК ПАРТНЕРЫ-КНОПКА === */
+/* === БЛОК МЕДИА-КНОПКА === */
 
 .media-more-btn {
   margin: 7% auto 0 auto;
@@ -511,10 +502,9 @@ main {
   background: #AF2C33;
   color: #ffffff;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  margin: 0;
   padding-bottom: 70px;
 }
 
@@ -579,7 +569,6 @@ main {
   color: #ffffff;
   min-height: 220px;
   margin-bottom: 32px;
-  resize: none;
 }
 
 .feedback-textarea::placeholder {
@@ -762,6 +751,7 @@ main {
 .site-footer {
   background: #444;
   color: #fff;
+  margin-top: auto;
   padding: 48px 0 24px 0;
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -792,6 +782,7 @@ main {
 .footer-contacts {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 48px;
   margin-bottom: 32px;
 }
@@ -800,7 +791,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 220px;
+  /* min-width: 220px; */
 }
 
 .footer-phone {
@@ -831,6 +822,7 @@ main {
   background: #AF2C33;
   color: #ffffff;
   width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -2585,4 +2577,262 @@ main {
   height: 25px;
 }
 
+/* Бургер: видимость и выпадающее меню */
+.burger { display:none; background:none; border:0; padding:8px; margin-right:16px; cursor:pointer; }
+.burger span { display:block; width:38px; height:4px; background:#fff; border-radius:4px; margin:5px 0; }
 
+/* Брейкпоинт 1280px: показываем бургер, прячем горизонтальное меню */
+
+/* АДАПТАЦИЯ СТАРТОВОЙ СТРАНИЦЫ */
+
+@media (max-width: 1280px) {
+  /* шапка + стартовая страница */
+  .sticky-header { justify-content: space-between; }
+  .burger { display:inline-flex; flex-direction:column; }
+  .hero-nav { display:none; position:absolute; top:64px; right:16px; background: #ffffff; border-radius:16px; padding:12px; gap:8px; flex-direction:column; }
+  .hero-nav a { display:block; padding:10px 14px; color: #000000; }
+  .hero-nav.is-open { display:flex !important; }
+  .hero-main-title { font-size: 40px; }
+  .author { font-size: 22px; }
+  .hero-chinese-text { font-size: 50px; margin: 25% 30px 0px 0px;}
+  .hero-subtitle { font-size: 22px; margin-top: 25%; }
+  
+  /* о нас */
+  .about-main-photo {width: 500px;}
+  .quote-container {width: 500px;}
+  .about-quote, .about-team {font-size: 18px;}
+  .about-more-btn {font-size: 16px;  padding: 10px 15px;}
+
+  /* услуги */
+  .service-card {font-size: 38px;}
+  .service-desc {font-size: 25px;}
+
+  /* медиа */
+  .media-logo-bg {width: 250px; height: 250px;}
+  .media-logo {max-width: 70%; max-height: 70%;}
+
+  /* фидбек */
+  .caption-element>p {font-size: 20px;}
+
+  /* футер */
+  .footer-phone {font-size: 24px;}
+  .footer-label {font-size: 20px;}
+  .footer-copyright {font-size: 8px;}
+
+}
+
+@media (max-width: 1024px) {
+  /* стартовая страница */
+  .hero-main-title { margin: 50% 0 0 30px; font-size: 35px; }
+  .author { font-size: 16px; }
+  .hero-chinese-text { font-size: 45px; margin: 50% 30px 0px 0px;}
+  .hero-subtitle { font-size: 16px; margin-top: 25%; }
+
+    /* о нас */
+  .about-main-photo {width: 400px;}
+  .quote-container {width: 400px;}
+  .about-quote, .about-team {font-size: 16px;}
+  .about-more-btn {font-size: 14px;  padding: 10px 10px;}
+  .about-main-text {font-size: 20px;}
+
+  /* услуги */
+  .service-card {font-size: 32px;}
+  .service-desc {font-size: 21px;}
+
+  /* медиа */
+  .media-logo-bg {width: 200px; height: 200px;}
+  .media-logo {max-width: 70%; max-height: 70%;}
+
+  /* фидбек */
+  .feedback-textarea {font-size: 14px; padding: 16px 24px;}
+  .feedback-input {font-size: 14px; padding: 10px 24px;}
+  .feedback-map>iframe {width: 100%; height: 300px;}
+  .caption-element>p {font-size: 20px;}
+
+  /* футер */
+  .footer-contacts { gap: 30px; }
+  .footer-phone {font-size: 20px;}
+  .footer-label {font-size: 16px;}
+  .footer-copyright {font-size: 8px;}
+}
+
+@media (max-width: 768px) {
+  /* стартовая страница */
+  .hero-main-title { margin: 50% 0 0 30px; font-size: 25px; }
+  .author { font-size: 14px; }
+  .hero-chinese-text { font-size: 33px; margin: 50% 30px 0px 0px;}
+  .hero-subtitle { font-size: 14px; margin-top: 25%; }
+  
+  /* о нас */
+  .about-main-photo {width: 300px;}
+  .quote-container {width: 300px;}
+  .about-quote, .about-team {font-size: 16px;}
+  .about-more-btn {font-size: 10px;  padding: 6px 5px;}
+  .about-main-text {font-size: 16px;}
+
+  /* услуги */
+  .service-card {font-size: 34px; padding: 0 10px;}
+  .service-desc {font-size: 20px; padding: 0 10px;}
+
+  /* медиа */
+  .media-row {flex-wrap: wrap;}
+  .media-card {flex: 1 1 calc(50%-20px)}
+  .media-logo-bg {width: 250px; height: 250px;}
+  .media-logo {max-width: 80%; max-height: 80%;}
+  .media-socials {gap: 10px;}
+  .media-social>img {width: 40px; height: 40px;}
+
+  /* фидбек */
+  .feedback-main {flex-direction: column;}
+  .feedback-textarea {font-size: 16px; padding: 16px 24px;}
+  .feedback-input {font-size: 16px; padding: 10px 24px;}
+  .feedback-map>iframe {width: 100%;}
+  .caption-element>p {font-size: 25px;}
+  .feedback-section {padding-bottom: 0;}
+
+  /* футер */
+  .footer-social>img { width: 50px; height: 50px;}
+  .footer-socials {gap: 20px}
+  .footer-contacts {gap: 15px;}
+  .footer-phone {font-size: 16px;}
+  .footer-label {font-size: 12px;}
+  .footer-copyright {font-size: 6px;}
+}
+
+@media (max-width: 576px) {
+  /* шапка+стартовая страница */
+  .burger span { display:block; width: 32px; height:4px;}
+  .hero-logo-row {padding-left: 40px; gap: 10px}
+  .hero-logo {width: 52px; height: 52px;}
+  .hero-title {font-size: 14px;}
+  .hero-main-title { margin: 30% 5px 0 0px; font-size: 30px; }
+  .author { font-size: 20px; margin-left: 0;}
+  .hero-chinese-text { font-size: 35px; margin: 30% 5px 0px 0px;}
+  .hero-subtitle { font-size: 18px; margin-top: 15%; margin-right: 0;}
+  .hero-section {display: flex; flex-direction: column;}
+  .hero-right {border-top-left-radius: 32px;}
+
+  /* о нас */
+  .about-header {font-size: 50px; padding-left: 40px;}
+  .about-main {flex-direction: column; gap: 15px;}
+  .about-main-left {padding: 32px 30px 32px 40px;}
+  .about-main-text {font-size: 16px;}
+  .about-more-btn {font-size: 16px;  padding: 6px 10px; margin: 10% 60% 0px 0px;}
+  .about-main-photo {width: 300px;}
+  .quote-container {width: 300px;}
+  .about-quote, .about-team {font-size: 16px;}
+
+  /* услуги */
+  .services-header {font-size: 50px; padding-left: 40px;}
+  .services-grid {margin: 0 50px 0 50px;}
+  .service-desc {display: none;}
+  .service-card {font-size: 35px;}
+
+  /* медиа */
+  .media-header {font-size: 50px; padding-left: 40px;}
+  .media-row {margin: 0;}
+  .media-more-btn {font-size: 22px; padding: 12px 30px;}
+
+  /* фидбек */
+  .feedback-title {font-size: 50px; padding-left: 40px; text-align: left;;}
+  .feedback-row {flex-direction: column;}
+  .feedback-input {font-size: 20px;}
+  .feedback-textarea {font-size: 20px;}
+  .feedback-main {padding: 0 40px;}
+  .caption-element>p {font-size: 18px;}
+
+  /* футер */
+  .footer-phone {font-size: 20px;}
+  .footer-label {font-size: 16px;}
+  .footer-contacts {flex: 1 1 calc(50%)}
+
+}
+
+/* АДАПТАЦИЯ "О НАС" */
+
+@media (max-width: 1280px) {
+  /* кто мы */
+  .about-desc-content-text p {font-size: 24px;}
+  .about-desc-content-img>img {width: 500px; height: 350px;}
+
+  /* цифры */
+  .big-numbers-small-text p:first-child {font-size: 130px;}
+  .big-numbers-small-text p:last-child {font-size: 40px;}
+
+  /* отзывы */
+  .about-reviews-section-card img {width: 50px; height: 50px; }
+  .about-reviews-section-card p {font-size: 16px;}
+
+}
+
+@media (max-width: 1024px) {
+  /* кто мы */
+  .about-desc-content-text h3 {font-size: 35px;}
+  .about-desc-content-text p {font-size: 18px;}
+  .about-desc-content-img>img {width: 400px; height: 250px;}
+
+  /* цифры */
+  .big-numbers-small-text p:first-child {font-size: 110px;}
+  .big-numbers-small-text p:last-child {font-size: 35px;}
+
+  /* отзывы */
+  .about-reviews-section-row {flex-wrap: wrap;}
+  .about-reviews-section-card>div>p {font-size: 20px;}
+  .about-reviews-section-card p {font-size: 14px;}
+  .about-reviews-section-card-links p {font-size: 20px;}
+  .about-reviews-section-card-links>div>a {font-size: 16px;}
+  .about-reviews-section-column 
+    .about-reviews-section-row:first-child 
+    .about-reviews-section-card:first-child {display: none;}
+  
+}
+
+@media (max-width: 768px) {
+  /* кто мы */
+  .about-desc-section {gap: 0;}
+  .about-desc-title {font-size: 50px;}
+  .about-desc-content {flex-direction: column;}
+  .about-desc-content-text h3 {font-size: 40px;margin-top: 0;}
+  .about-desc-content-text p {font-size: 20px;}
+  .about-desc-content-img>img {width: 500px; height: 350px;}
+
+  /* цифры */
+  .about-numbers-title {font-size: 50px;}
+  .about-numbers-section {gap: 0;}
+  .big-numbers-small-text p:first-child {font-size: 90px;}
+  .big-numbers-small-text p:last-child {font-size: 25px;}
+
+  /* отзывы */
+  .about-reviews-section-card>div {gap: 10px;}
+  .about-reviews-section-card>div>p {font-size: 20px;}
+  .about-reviews-section-card p {font-size: 14px;}
+  .about-reviews-section-card-links p {font-size: 20px;}
+
+}
+
+@media (max-width: 576px) {
+  /* кто мы */
+  .about-desc-title {font-size: 50px; padding-left: 40px;}
+  .about-desc-content {padding: 0 40px;}
+  .about-desc-content-text h3 {font-size: 35px;}
+  .about-desc-content-text p {font-size: 18px;}
+  .about-desc-content-img>img {width: 300px; height: 150px; border-radius: 16px;}
+
+  /* цифры */
+  .about-numbers-title {font-size: 50px; padding-left: 40px; text-align: left;}
+  .all-numbers {padding: 0 40px;}
+  .big-numbers-small-text {flex-direction: column;align-items: start; gap: 0;}
+  .big-numbers-small-text p:first-child {font-size: 75px; margin-top: 20px;}
+  .big-numbers-small-text p:last-child {font-size: 18px;}
+
+  /* отзывы */
+  .about-reviews-section-column {padding: 0 40px;}
+  .about-reviews-section h2 {font-size: 50px; padding-left: 40px;}
+  .about-reviews-section {gap: 0;}
+  .about-reviews-section-card {width: auto;}
+  .about-reviews-section-card-links {width: auto;}
+  .about-reviews-section-card>div {gap: 10px;}
+  .about-reviews-section-card>div>p {font-size: 20px;}
+  .about-reviews-section-card p {font-size: 14px;}
+  .about-reviews-section-card-links p {font-size: 20px;}
+}

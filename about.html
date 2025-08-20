@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
   <title>О нас — Русско-Азиатский хаб</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -18,6 +19,9 @@
         Высшего Образования и Экотуризма
       </div>
     </div>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="hero-nav">
+      <span></span><span></span><span></span>
+    </button>
     <nav class="hero-nav">
       <a href="#ourwork">кто мы?</a>
       <a href="#numbers">достижения</a>
@@ -42,7 +46,7 @@
       <h2 class="about-numbers-title">наши достижения</h2>
       <div class="all-numbers">
         <div class="big-numbers-small-text">
-          <p>>100<p>
+          <p>>100</p>
           <p>студентов из Китая поступили в вузы России с нашей помощью</p>
         </div>
         <div class="big-numbers-small-text">
@@ -218,6 +222,28 @@
         }
       });
     });
+  </script>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.hero-nav');
+        if (!burger || !nav) return;
+        burger.addEventListener('click', function() {
+          const open = burger.getAttribute('aria-expanded') === 'true';
+          burger.setAttribute('aria-expanded', String(!open));
+          nav.classList.toggle('is-open');
+        });
+
+        // Закрывать меню после клика по ссылке
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            nav.classList.remove('is-open');
+            burger.setAttribute('aria-expanded', 'false');
+          });
+        });
+      });
   </script>
   
 </body>
