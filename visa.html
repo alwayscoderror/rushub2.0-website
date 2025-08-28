@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>Визовый центр — Русско-Азиатский Хаб</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -19,6 +20,9 @@
             Высшего Образования и Экотуризма
           </div>
         </div>
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="hero-nav">
+          <span></span><span></span><span></span>
+        </button>
         <nav class="hero-nav">
           <a href="#visa-services">услуги</a>
           <a href="#info">подробнее</a>
@@ -42,7 +46,7 @@
               <div class="visa-section-list-item">
                 <div class="visa-section-list-item-title">
                   <img src="img/icons/travel-visa.svg" alt="">
-                  <h3>туристические визы (L)</h3>
+                  <h3>туристическая виза (L)</h3>
                 </div>
                 <p class="visa-price">от 16.500 ₽</p>
                 <p class="visa-desc">этот тип визы выдаётся людям, планирующим отдых, экскурсии или посещение достопримечательностей.</p>
@@ -52,7 +56,7 @@
               <div class="visa-section-list-item">
                 <div class="visa-section-list-item-title">
                   <img src="img/icons/business-visa.svg" alt="">
-                  <h3>деловые визы (M)</h3>
+                  <h3>деловая виза (M)</h3>
                 </div>
                 <p class="visa-price">от 21.500 ₽</p>
                 <p class="visa-desc">этот тип визы позволяет находиться в стране для участия в деловых мероприятиях, выставках и конференциях.</p>
@@ -72,7 +76,7 @@
               <div class="visa-section-list-item">
                 <div class="visa-section-list-item-title">
                   <img src="img/icons/guest-visa.svg" alt="">
-                  <h3>гостевые визы (S1, S2)</h3>
+                  <h3>гостевая виза (S1, S2)</h3>
                 </div>
                 <p class="visa-price">от 19.000 ₽</p>
                 <p class="visa-desc">этот тип визы предназначен для иностранных граждан, которые сопровождают членов своей семьи, работающих или обучающихся в Китае.</p>
@@ -94,7 +98,7 @@
               <div class="visa-section-list-item">
                 <div class="visa-section-list-item-title">
                   <img src="img/icons/study-visa.svg" alt="">
-                  <h3>учебные визы (X1, X2)</h3>
+                  <h3>учебная виза (X1, X2)</h3>
                 </div>
                 <p class="visa-price">от 16.500 ₽</p>
                 <p class="visa-desc">этот тип визы даёт право на долгосрочное или краткосрочное обучение в китайских учебных заведениях.</p>
@@ -104,7 +108,7 @@
               <div class="visa-section-list-item">
                 <div class="visa-section-list-item-title">
                   <img src="img/icons/family-visa.svg" alt="">
-                  <h3>семейные визы (Q1, Q2)</h3>
+                  <h3>семейная виза (Q1, Q2)</h3>
                 </div>
                 <p class="visa-price">от 16.500 ₽</p>
                 <p class="visa-desc">этот тип визыпредназначен для иностранных граждан, которые хотят воссоединиться с членами семьи, проживающими в Китае.</p>
@@ -124,7 +128,7 @@
               <div class="visa-section-list-item">
                 <div class="visa-section-list-item-title">
                   <img src="img/icons/media-visa.svg" alt="">
-                  <h3>визы для СМИ (J1, J2)</h3>
+                  <h3>виза для СМИ (J1, J2)</h3>
                 </div>
                 <p class="visa-price">от 21.000 ₽</p>
                 <p class="visa-desc">этот тип визы выдаётся иностранным корреспондентам, которые приезжают в Китай для работы в средствах массовой информации.</p>
@@ -143,101 +147,13 @@
           </div>
         </div>
       </section>
-      <!-- <section id="travel" class="visa-section-travel-prices">
-        <h2>туристические визы</h2>
-        <div class="visa-section-travel-prices-content">
-          <div class="price-card-travel">
-            <h3>однократная</h3>
-            <img src="img/icons/travel-visa.svg" alt="">
-            <p>16.500 ₽</p>
-            <a href="#contacts">оформить</a>
-          </div>
-          <div class="price-card-travel">
-            <h3>двукратная</h3>
-            <img src="img/icons/travel-visa.svg" alt="">
-            <p>19.000 ₽</p>
-            <a href="#contacts">оформить</a>
-          </div>
-          <div class="extra-fee">
-            <h3>срочная виза</h3>
-            <img src="img/icons/lightning.svg" alt="">
-            <p>+4.000 ₽</p>
-          </div>
-        </div>
-        <div class="nota-bene">
-          <p>сроки исполнения: <br>
-            <b>обычная виза</b> - 4 рабочих дня <br>
-            <b>срочная виза</b> - 3 рабочих дня</p>
-        </div>
-      </section>
-      <section id="study" class="visa-section-study-prices">
-        <h2>учебные визы</h2>
-        <div class="visa-section-study-prices-content">
-          <div class="price-card-study">
-            <h3>тип X1 <br>
-              (от 180 дней)</h3>
-            <img src="img/icons/study-visa.svg" alt="">
-            <p>16.500 ₽</p>
-            <a href="#contacts">оформить</a>
-          </div>
-          <div class="extra-fee">
-            <h3>срочная виза</h3>
-            <img src="img/icons/lightning.svg" alt="">
-            <p>+4.000 ₽</p>
-          </div>
-          <div class="price-card-study">
-            <h3>тип X2 <br>
-              (до 180 дней)</h3>
-            <img src="img/icons/study-visa.svg" alt="">
-            <p>16.500 ₽</p>
-            <a href="#contacts">оформить</a>
-          </div>
-        </div>
-        <div class="nota-bene">
-          <p>сроки исполнения: <br>
-            <b>обычная виза</b> - 4 рабочих дня <br>
-            <b>срочная виза</b> - 3 рабочих дня</p>
-        </div>
-      </section>
-      <section id="business" class="visa-section-business-prices">
-        <h2>деловые визы</h2>
-        <div class="visa-section-business-prices-content">
-          <div class="price-card-business">
-            <h3>однократная</h3>
-            <img src="img/icons/business-visa.svg" alt="">
-            <p>21.000 ₽</p>
-            <a href="#contacts">оформить</a>
-          </div>
-          <div class="price-card-business">
-            <h3>двукратная</h3>
-            <img src="img/icons/business-visa.svg" alt="">
-            <p>23.500 ₽</p>
-            <a href="#contacts">оформить</a>
-          </div>
-          <div class="price-card-business">
-            <h3>многократная</h3>
-            <img src="img/icons/business-visa.svg" alt="">
-            <p>25.900 ₽</p>
-            <a href="#contacts">оформить</a>
-          </div>
-          <div class="extra-fee">
-            <h3>срочная виза</h3>
-            <img src="img/icons/lightning.svg" alt="">
-            <p>+4.000 ₽</p>
-          </div>
-        </div>
-        <div class="nota-bene">
-          <p>сроки исполнения: <br>
-            <b>обычная виза</b> - 4 рабочих дня <br>
-            <b>срочная виза</b> - 3 рабочих дня</p>
-        </div>
-      </section> -->
       <section id="info" class="visa-section-info">
         <h2>важная информация</h2>
         <div class="visa-section-info-content">
-          <p>сроки исполнения: <br>
+          <p>сроки исполнения:<br>
             <b>обычная виза</b> - 4 рабочих дня*<br>
-            <b>срочная виза</b> - 3 рабочих дня*</p>
+            <b>срочная виза</b> - 3 рабочих дня*
+          </p>
         </div>
         <div class="visa-section-info-caption">
           <p>* день приема и подготовка Анкеты заявителя в срок не включаются <br>
@@ -249,7 +165,7 @@
         <div class="visa-section-contacts-content">
           <div class="visa-contact">
             <img src="img/icons/phone.svg" alt="">
-            <p>+7(495)157-82-22 (Пн-Пт: 9:30-18:30)</p>
+            <p>+7(495)157-82-22<br>(Пн-Пт: 9:30-18:30)</p>
           </div>
           <div class="visa-contact">
             <img src="img/icons/telegram.svg" alt="">
@@ -271,10 +187,11 @@
           <form class="feedback-form" id="feedbackForm" action="php/send_email.php" method="POST">
             <div class="feedback-row">
               <input type="text" class="feedback-input" name="name" placeholder="ваше имя" required>
-              <input type="email" class="feedback-input" name="email" placeholder="ваш email" required>
+              <input type="text" class="feedback-input" name="surname" placeholder="ваша фамилия" required>
+
             </div>
             <div class="feedback-row">
-              <input type="text" class="feedback-input" name="surname" placeholder="ваша фамилия" required>
+              <input type="email" class="feedback-input" name="email" placeholder="ваш email" required>
               <input type="email" class="feedback-input" placeholder="повторите email" required>
             </div>
             <textarea class="feedback-textarea" name="message" placeholder="ваше сообщение" required></textarea>
@@ -375,6 +292,28 @@
           } finally {
             submitBtn.disabled = false; submitBtn.textContent = oldText;
           }
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.hero-nav');
+        if (!burger || !nav) return;
+        burger.addEventListener('click', function() {
+          const open = burger.getAttribute('aria-expanded') === 'true';
+          burger.setAttribute('aria-expanded', String(!open));
+          nav.classList.toggle('is-open');
+        });
+
+        // Закрывать меню после клика по ссылке
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            nav.classList.remove('is-open');
+            burger.setAttribute('aria-expanded', 'false');
+          });
         });
       });
     </script>

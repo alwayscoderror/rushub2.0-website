@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>Учёба в Китае — Русско-Азиатский Хаб</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -19,6 +20,9 @@
             Высшего Образования и Экотуризма
           </div>
         </div>
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="hero-nav">
+          <span></span><span></span><span></span>
+        </button>
         <nav class="hero-nav">
           <a href="#partners">партнеры</a>
           <a href="#apply">как поступить?</a>
@@ -44,27 +48,23 @@
             <div class="study-section-partners-row-unit">
               <img src="img/logos/lanzhou_logo.svg" alt="">
               <a class="btn-uni-more-info" href="#lanzhou">подробнее</a>
-              <!-- <h3>Lanzhou University<br>兰州大学</h3> -->
             </div>
             <div class="study-section-partners-row-unit">
               <img src="img/logos/tongji_logo.svg" alt="">
               <a class="btn-uni-more-info" href="#tongji">подробнее</a>
-              <!-- <h3>Tongji University<br>同济大学</h3> -->
             </div>
           </div>
           <div class="study-section-partners-row">
             <div class="study-section-partners-row-unit">
               <img src="img/logos/ECNU_logo.svg" alt="">
               <a class="btn-uni-more-info" href="#ecnu">подробнее</a>
-              <!-- <h3>East China Normal University<br>华东师范大学</h3> -->
             </div>
             <div class="study-section-partners-row-unit">
               <img src="img/logos/SCUT_logo.png" alt="">
               <a class="btn-uni-more-info" href="#scut">подробнее</a>
-              <!-- <h3>South China University of Technology<br>华南理工大学</h3> -->
             </div>
             <div class="study-section-partners-row-addition">
-              <h3>и ещё<br>более 50<br>университетов</h3>
+              <h3>и ещё<br>более 50<br>универcитетов</h3>
             </div>
           </div>
         </div>
@@ -175,10 +175,10 @@
           <form class="feedback-form" id="feedbackForm" action="php/send_email.php" method="POST">
             <div class="feedback-row">
               <input type="text" class="feedback-input" name="name" placeholder="ваше имя" required>
-              <input type="email" class="feedback-input" name="email" placeholder="ваш email" required>
+              <input type="text" class="feedback-input" name="surname" placeholder="ваша фамилия" required>
             </div>
             <div class="feedback-row">
-              <input type="text" class="feedback-input" name="surname" placeholder="ваша фамилия" required>
+              <input type="email" class="feedback-input" name="email" placeholder="ваш email" required>
               <input type="email" class="feedback-input" placeholder="повторите email" required>
             </div>
             <textarea class="feedback-textarea" name="message" placeholder="ваше сообщение" required></textarea>
@@ -279,6 +279,28 @@
           } finally {
             submitBtn.disabled = false; submitBtn.textContent = oldText;
           }
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.hero-nav');
+        if (!burger || !nav) return;
+        burger.addEventListener('click', function() {
+          const open = burger.getAttribute('aria-expanded') === 'true';
+          burger.setAttribute('aria-expanded', String(!open));
+          nav.classList.toggle('is-open');
+        });
+
+        // Закрывать меню после клика по ссылке
+        const navLinks = nav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            nav.classList.remove('is-open');
+            burger.setAttribute('aria-expanded', 'false');
+          });
         });
       });
     </script>

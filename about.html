@@ -116,11 +116,11 @@
         <form class="feedback-form" id="feedbackForm" action="php/send_email.php" method="POST">
           <div class="feedback-row">
             <input type="text" class="feedback-input" name="name" placeholder="ваше имя" required>
-            <input type="email" class="feedback-input" name="email" placeholder="ваш email" required>
+            <input type="text" class="feedback-input" name="surname" placeholder="ваша фамилия" required>
           </div>
           <div class="feedback-row">
-            <input type="text" class="feedback-input" name="surname" placeholder="ваша фамилия" required>
-                          <input type="email" class="feedback-input" placeholder="повторите email" required>
+            <input type="email" class="feedback-input" name="email" placeholder="ваш email" required>
+            <input type="email" class="feedback-input" placeholder="повторите email" required>
           </div>
           <textarea class="feedback-textarea" name="message" placeholder="ваше сообщение" required></textarea>
           <button type="submit" class="feedback-btn">отправить</button>
