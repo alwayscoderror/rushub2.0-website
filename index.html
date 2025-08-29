@@ -260,19 +260,51 @@
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.hero-nav');
         if (!burger || !nav) return;
-        burger.addEventListener('click', function() {
+
+        // Функция для закрытия меню с анимацией
+        function closeMenu() {
+          nav.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+
+        // Функция для открытия меню с анимацией
+        function openMenu() {
+          nav.classList.add('is-open');
+          burger.setAttribute('aria-expanded', 'true');
+        }
+
+        burger.addEventListener('click', function(e) {
+          e.preventDefault();
           const open = burger.getAttribute('aria-expanded') === 'true';
-          burger.setAttribute('aria-expanded', String(!open));
-          nav.classList.toggle('is-open');
+          
+          if (open) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
         });
 
         // Закрывать меню после клика по ссылке
         const navLinks = nav.querySelectorAll('a');
         navLinks.forEach(function(link) {
           link.addEventListener('click', function() {
-            nav.classList.remove('is-open');
-            burger.setAttribute('aria-expanded', 'false');
+            // Небольшая задержка для плавного перехода
+            setTimeout(closeMenu, 150);
           });
+        });
+
+        // Закрывать меню при клике вне его
+        document.addEventListener('click', function(e) {
+          if (!burger.contains(e.target) && !nav.contains(e.target) && nav.classList.contains('is-open')) {
+            closeMenu();
+          }
+        });
+
+        // Закрывать меню при нажатии Escape
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+            closeMenu();
+          }
         });
       });
     </script>

@@ -2568,8 +2568,67 @@ main {
 }
 
 /* Бургер: видимость и выпадающее меню */
-.burger { display:none; background:none; border:0; padding:8px; margin-right:16px; cursor:pointer; }
-.burger span { display:block; width:38px; height:4px; background:#fff; border-radius:4px; margin:5px 0; }
+.burger { 
+  display:none; 
+  background:none; 
+  border:0; 
+  padding:8px; 
+  margin-right:16px; 
+  cursor:pointer;
+  position: relative;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  width: 38px; /* ширина иконки бургера совпадает с полосками */
+  height: 24px; /* высота иконки бургера для трёх полос */
+}
+
+.burger span { 
+  display:block; 
+  width:38px; 
+  height:4px; 
+  background:#fff; 
+  border-radius:4px; 
+  margin:0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+  position: absolute;
+  left: 0; right: 0;
+}
+
+/* расположение трёх полос в закрытом состоянии */
+.burger span:nth-child(1) { top: 0; }
+.burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+.burger span:nth-child(3) { bottom: 0; }
+
+/* Анимация бургера при открытии — чёткий X по центру */
+.burger[aria-expanded="true"] span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%) scale(0);
+}
+
+.burger[aria-expanded="true"] span:nth-child(3) {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Дополнительные стили для лучшего отображения крестика */
+.burger[aria-expanded="true"] span {
+  background: #fff;
+}
+
+/* Улучшенная видимость крестика */
+.burger[aria-expanded="true"] span:nth-child(1),
+.burger[aria-expanded="true"] span:nth-child(3) {
+  background: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
 
 /* Брейкпоинт 1280px: показываем бургер, прячем горизонтальное меню */
 
@@ -2580,9 +2639,77 @@ main {
   .sticky-header { justify-content: space-between; }
   .burger {display: inline-flex; flex-direction: column;}
 
-  .hero-nav { display:none; position:absolute; top:64px; right:16px; background: #ffffff; border-radius:16px; padding:12px; gap:8px; flex-direction:column; }
-  .hero-nav a { display:block; padding:10px 14px; color: #000000; }
-  .hero-nav.is-open { display:flex !important; }
+  .hero-nav { 
+    display: flex; 
+    position: absolute; 
+    top: 64px; 
+    right: 16px; 
+    background: #ffffff; 
+    border-radius: 16px; 
+    padding: 12px; 
+    gap: 8px; 
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px) scale(0.95);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .hero-nav a { 
+    display: block; 
+    padding: 12px 16px; 
+    color: #000000; 
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  
+  .hero-nav a:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateX(0);
+  }
+  
+  .hero-nav.is-open { 
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+  
+  .hero-nav.is-open a {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  /* Анимация появления ссылок с задержкой */
+  .hero-nav.is-open a:nth-child(1) { transition-delay: 0.1s; }
+  .hero-nav.is-open a:nth-child(2) { transition-delay: 0.15s; }
+  .hero-nav.is-open a:nth-child(3) { transition-delay: 0.2s; }
+  .hero-nav.is-open a:nth-child(4) { transition-delay: 0.25s; }
+  
+  /* Дополнительные стили для улучшения UX */
+  /* .hero-nav::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hero-nav.is-open::before {
+    opacity: 1;
+  } */
+   
   .hero-main-title { font-size: 40px; }
   .author { font-size: 22px; }
   .hero-chinese-text { font-size: 50px;}
@@ -2699,7 +2826,27 @@ main {
 
 @media (max-width: 576px) {
   /* шапка+стартовая страница */
-  .burger span { display:block; width: 32px; height:4px;}
+  .burger span { 
+    display:block; 
+    width: 32px; 
+    height:4px;
+    transition: all 0.3s ease;
+    left: 0; right: 0;
+  }
+  
+  /* Мобильная иконка: те же правила центрирования */
+  .burger { width: 32px; height: 22px; }
+  .burger span:nth-child(1) { top: 0; }
+  .burger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+  .burger span:nth-child(3) { bottom: 0; }
+  .burger[aria-expanded="true"] span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; visibility: hidden; transform: translateY(-50%) scale(0); }
+  .burger[aria-expanded="true"] span:nth-child(3) { bottom: auto; top: 50%; transform: translateY(-50%) rotate(-45deg); }
+  
+  /* Дополнительные стили для лучшего отображения крестика на мобильных */
+  .burger[aria-expanded="true"] span {
+    background: #fff;
+  }
   .hero-logo-row {padding-left: 40px; gap: 10px}
   .hero-logo {width: 52px; height: 52px;}
   .hero-title {font-size: 14px;}
